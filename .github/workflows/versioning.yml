@@ -9,18 +9,18 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: '3.10'
 
       - name: Install dependencies
         run: |
-          pip install poetry
-          poetry install
+            python -m pip install --upgrade pip
+            pip install poetry
+            poetry install
 
       - name: Bump version and push tag
         id: bump_version
