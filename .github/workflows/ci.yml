@@ -21,22 +21,6 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
 
-      - name: Update and install dependencies
-        run: |
-          poetry install
-          poetry update
-          poetry lock
-          poetry install
-
-      - name: Run linting
-        run: poetry run flake8
-
-      - name: Run formatting check
-        run: poetry run black --check .
-
-      - name: Run tests
-        run: PYTHONDONTWRITEBYTECODE=1 poetry run pytest
-
       - name: Update lock file if needed
         run: |
           git config --global user.name "github-actions"
@@ -46,4 +30,15 @@ jobs:
             git add poetry.lock
             git commit -m "Update poetry.lock to match pyproject.toml changes"
             git push origin main
-          fi
+          
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run linting
+        run: poetry run flake8
+
+      - name: Run formatting check
+        run: poetry run black --check .
+
+      - name: Run tests
+        run: PYTHONDONTWRITEBYTECODE=1 poetry run pytest
