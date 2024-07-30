@@ -2,7 +2,7 @@
 name = "python_base_project"
 version = "0.0.5"
 description = "A sample Python project"
-authors = ["Your Name <you@example.com>"]
+authors = ["Bella Belgarokova <bella.belgarokova@gmail.com>"]
 readme = "README.md"
 packages = [
     { include = "src" }
