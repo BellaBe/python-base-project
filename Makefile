@@ -10,6 +10,12 @@ lint:
 format:
 	poetry run black .
 
+sort:
+	poetry run isort .
+
+pre-commit:
+	poetry run pre-commit run --all-files
+
 docker-build:
 	docker build -t my_project .
 
