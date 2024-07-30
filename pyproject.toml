@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python_base_project"
-version = "0.0.2"
+version = "0.0.3"
 description = "A sample Python project"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
