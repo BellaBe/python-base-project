@@ -1,6 +1,6 @@
 install:
 	poetry install
-	
+
 test:
 	PYTHONDONTWRITEBYTECODE=1 poetry run pytest
 
