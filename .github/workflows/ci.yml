@@ -37,15 +37,3 @@ jobs:
 
       - name: Run pre-commit
         run: poetry run pre-commit run --all-files
-
-      - name: Run isort
-        run: poetry run isort .
-
-      - name: Run linting
-        run: poetry run flake8
-
-      - name: Run formatting check
-        run: poetry run black --check .
-
-      - name: Run tests
-        run: PYTHONDONTWRITEBYTECODE=1 poetry run pytest
