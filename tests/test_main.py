@@ -6,4 +6,4 @@ def test_main(capfd):
     out, err = capfd.readouterr()
     if err:
         print(err)
-    assert out == "Hello, world!\n"
+    assert out == "Hello, world!\nTest\n"
