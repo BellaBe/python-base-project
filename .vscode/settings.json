@@ -1,6 +1,0 @@
-{
-  "python.createEnvironment.contentButton": "show",
-  "editor.defaultFormatter": "ms-python.black-formatter",
-  "editor.formatOnSave": true,
-  "notebook.defaultFormatter": "ms-python.black-formatter"
-}
