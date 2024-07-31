@@ -19,11 +19,5 @@ coverage:
 pre-commit:
 	poetry run pre-commit run --all-files
 
-docker-build:
-	docker build -t my_project .
-
-docker-run:
-	docker run --rm my_project
-
 generate-tests:
 	poetry run python generate_tests.py
