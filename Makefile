@@ -13,6 +13,9 @@ format:
 sort:
 	poetry run isort .
 
+coverage:
+	PYTHONDONTWRITEBYTECODE=1 poetry run coverage run -m pytest && poetry run coverage report --omit="__init__.py,tests/**/*,venv/*"
+
 pre-commit:
 	poetry run pre-commit run --all-files
 
