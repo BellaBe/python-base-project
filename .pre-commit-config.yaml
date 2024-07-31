@@ -113,3 +113,8 @@ repos:
         language: system
         types: [python]
         exclude: __pycache__|\.pytest_cache
+      - id: remove-mypy-cache
+        name: Remove mypy cache
+        entry: bash -c 'rm -rf .mypy_cache'
+        language: system
+        pass_filenames: false
