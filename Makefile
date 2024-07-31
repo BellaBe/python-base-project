@@ -21,3 +21,6 @@ docker-build:
 
 docker-run:
 	docker run --rm my_project
+
+generate-tests:
+	poetry run python generate_tests.py

@@ -13,32 +13,20 @@ python = "^3.10"
 requests = "^2.26.0"
 click = ">=8.0.2"
 isort = "^5.13.2"
+langchain = "^0.2.11"
+langchain-openai = "^0.1.19"
+langchain-groq = "^0.1.8"
+langchain-community = "^0.2.10"
+gitpython = "^3.1.43"
+langchain-core = "^0.2.24"
+python-dotenv = "^1.0.1"
+pre-commit = "^3.8.0"
+coverage = "^7.6.0"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.20.0"
 pytest = "^7.0.0"
-flake8 = "^5.0.4"
-flake8-bugbear = "^22.9.23"
-flake8-comprehensions = "^3.9.0"
-black = "^23.1.0"
-flake8-pyproject = "^1.2.3"
+
 isort = "^5.13.2"
-
-[tool.black]
-line-length = 88
-target-version = ['py37', 'py38', 'py39', 'py310']
-exclude = '''
-/(
-    \.git
-  | \.venv
-  | \.vscode
-)/
-'''
-
-[tool.flake8]
-extend-ignore = ["E203", "W503"]
-select = ["B","B9","C","E","F","W"]
-maximum-complexity = 10
 
 [tool.pytest.ini_options]
 addopts = "--disable-warnings --cache-clear"
