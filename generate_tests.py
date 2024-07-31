@@ -142,6 +142,7 @@ def get_function_code(file_path, function_name):
                 f"def {function_name}(",
             ) and stripped_line.endswith(":"):
                 capture = True
+                print("CAPTURE", capture)
                 function_code.append(line)
                 # Capture subsequent lines until the next double newline
                 for j in range(i + 1, len(lines)):
@@ -149,6 +150,7 @@ def get_function_code(file_path, function_name):
                         break
                     function_code.append(lines[j])
                 break
+    print("CAPTURE", capture)
     return "".join(function_code)
 
 
@@ -215,6 +217,7 @@ def main():
     repo = Repo(".")
     changed_files = get_changed_files()
     deleted_functions = get_deleted_functions(repo)
+    print(deleted_functions)
     for file_path in changed_files:
         if file_path.startswith("src/") and file_path.endswith(".py"):
             functions = parse_functions(file_path)
