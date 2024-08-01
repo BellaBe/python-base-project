@@ -52,7 +52,7 @@ repos:
         description: verifies that test files are named correctly.
         entry: name-tests-test
         language: python
-        args: [--pytest]
+        args: [--pytest-test-first]
       - id: detect-private-key
         name: detect private key
         description: detects the presence of private keys.
@@ -118,3 +118,7 @@ repos:
         entry: bash -c 'rm -rf .mypy_cache'
         language: system
         pass_filenames: false
+      - id: remove-pycache
+        name: Remove pycache
+        entry: bash -c 'find . -type d -name __pycache__ -exec rm -r {} + '
+        language: system
