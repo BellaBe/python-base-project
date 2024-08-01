@@ -20,4 +20,4 @@ pre-commit:
 	poetry run pre-commit run --all-files
 
 generate-tests:
-	poetry run python generate_tests.py
+	poetry run python generate_tests_cli.py --files $(files) --functions $(functions)
